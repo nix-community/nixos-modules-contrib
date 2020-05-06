@@ -3,6 +3,13 @@
 Useful NixOS modules which may not belong in the Nixpkgs repository
 itself.
 
+# Contributing
+
+Feel free to create a new directory with your module. Use CODEOWNERS
+to add yourself as a required reviewer for changes to that directory.
+
+# Modules
+
 ## auto-raid0
 
 Automatically create LVM-based RAID-0 logical volumes on startup.
