@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "nixos_modules_contrib"
+version = "0.1.0"
+description = "NixOS modules that don't quite belong in NixOS."
+authors = ["adisbladis <adisbladis@gmail.com>"]
+
+packages = [
+    { include = "nixos_modules_contrib" },
+    { include = "auto-luks" },
+    { include = "auto-raid0" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+nixops = {git = "https://github.com/NixOS/nixops.git", rev = "master"}
+
+[tool.poetry.plugins."nixops"]
+nixos_modules_contrib = "nixos_modules_contrib.plugin"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
